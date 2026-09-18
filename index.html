@@ -2,10 +2,98 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>My Personal Site</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kyla Ford ❀ Web Development Student</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
-  <!-- Add your HTML content here -->
+  <!-- The header is the first thing visitors see. -->
+  <header class="hero" id="home">
+    <nav class="navigation">
+      <a class="logo" href="#home"></a>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#interests">Interests</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+
+    <div class="hero-content">
+      <div class="hero-text">
+        <p class="eyebrow">Web development student</p>
+        <h1>Hi, I’m <span>Kyla Ford</span>.</h1>
+        <p class="intro">I am learning to turn creative ideas into useful and beautiful websites.</p>
+        <a class="button" href="#about">Get to know me</a>
+      </div>
+
+      <div class="profile-frame">
+        <span class="flower flower-top-left">✿</span>
+        <span class="flower flower-top-center">✿</span>
+        <span class="flower flower-top-right">✿</span>
+        <img class="profile-photo" src="kyla1.jpeg" alt="Portrait of Your Name">
+        <span class="flower flower-middle-left">✿</span>
+        <span class="flower flower-middle-right">✿</span>
+        <span class="flower flower-bottom-left">✿</span>
+        <span class="flower flower-bottom-center">✿</span>
+        <span class="flower flower-bottom-right">✿</span>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- This section is a short introduction. -->
+    <section class="section about-section" id="about">
+      <p class="eyebrow">A little about me</p>
+      <h2>curious, creative, and always learning</h2>
+      <p class="about-text">I am studying web development and building my skills one project at a time. I enjoy solving problems, trying new ideas, and making websites that are easy for people to use.</p>
+    </section>
+
+    <!-- Skills are listed as simple, editable items. -->
+    <section class="section" id="skills">
+      <p class="eyebrow">What I am learning</p>
+      <h2>my skills</h2>
+      <div class="skill-list">
+        <div class="skill-item"><strong class="list-flower">✿</strong><span>HTML</span></div>
+        <div class="skill-item"><strong class="list-flower">✿</strong><span>CSS</span></div>
+        <div class="skill-item"><strong class="list-flower">✿</strong><span>Responsive design</span></div>
+        <div class="skill-item"><strong class="list-flower">✿</strong><span>Creative problem-solving</span></div>
+      </div>
+    </section>
+
+    <!-- Replace these example books with your own favorites. -->
+    <section class="section interests-section" id="interests">
+      <div class="interest-column">
+        <p class="eyebrow">Pages I return to</p>
+        <h2>Favorite books <i class="fa-solid fa-book-open section-title-icon" aria-hidden="true"></i></h2>
+        <ul class="favorite-list">
+          <li><span class="list-flower">✿</span><span><strong>Lessons in Chemistry</strong><small>Bonnie Garmus</small></span></li>
+          <li><span class="list-flower">✿</span><span><strong>All About Love</strong><small>Bell Hooks</small></span></li>
+          <li><span class="list-flower">✿</span><span><strong>Ring</strong><small>Koji Suzuki</small></span></li>
+        </ul>
+      </div>
+
+      <!-- Replace these example artists with your own favorites. -->
+      <div class="interest-column music-column">
+        <p class="eyebrow">Sounds I enjoy</p>
+        <h2>Favorite artists <i class="fa-solid fa-music section-title-icon" aria-hidden="true"></i></h2>
+        <ul class="favorite-list">
+          <li><span class="list-flower">✿</span><span><strong>Rihanna</strong></span></li>
+          <li><span class="list-flower">✿</span><span><strong>Travis Scott</strong></span></li>
+          <li><span class="list-flower">✿</span><span><strong>PinkPantheress</strong></span></li>
+          <li><span class="list-flower">✿</span><span><strong>Janet Jackson</strong></span></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contact">
+    <p class="contact-message">Let’s connect! Send me a message or find me on LinkedIn or GitHub ✿</p>
+    <div class="contact-links">
+      <a href="mailto:fordky96@rowan.edu" aria-label="Email Kyla" title="Email me"><span class="contact-icon" aria-hidden="true">📧</span></a>
+      <a href="https://www.linkedin.com/in/kyla-ford-5624b3216/" target="_blank" rel="noopener noreferrer" aria-label="Visit Kyla's LinkedIn" title="Visit my LinkedIn"><span class="contact-icon" aria-hidden="true">in</span></a>
+      <a href="https://github.com/KylaFord" target="_blank" rel="noopener noreferrer" aria-label="Visit Kyla's GitHub" title="Visit my GitHub"><span class="contact-icon github-cat" aria-hidden="true">🐱</span></a>
+    </div>
+  </footer>
 </body>
 </html>

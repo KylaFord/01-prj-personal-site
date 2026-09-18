@@ -1,1 +1,455 @@
-/* Add you CSS here */
+/* These colors are used throughout the page. Try changing them to make the site your own. */
+:root {
+	--dark-color: #65585a;
+	--cream-color: #e8f2f6;
+	--paper-color: #fff0f5;
+	--blue-color: #dcecf3;
+	--flower-pink: #f3b8ca;
+	--brown-color: #8a7778;
+	--muted-color: #766a6c;
+}
+
+/* This makes sizing easier to understand and keeps the page from touching the edges. */
+* {
+	box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	margin: 0;
+	color: var(--dark-color);
+	background: var(--paper-color);
+	background-image: linear-gradient(145deg, #fff0f5 0%, #f9dfe8 24%, #f3b8ca 45%, #e8f2f6 68%, #dcecf3 86%, #f9dfe8 100%);
+	background-size: 180% 180%;
+	animation: background-flow 24s ease-in-out infinite alternate;
+	background-attachment: fixed;
+	font-family: 'Gill Sans', 'Trebuchet MS', Arial, sans-serif;
+	line-height: 1.6;
+	cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath fill='%23f3b8ca' stroke='%2365585a' stroke-width='1' d='M12 21S3 15.4 3 8.5C3 5.5 5.2 3 8 3c1.7 0 3.2.9 4 2.3C12.8 3.9 14.3 3 16 3c2.8 0 5 2.5 5 5.5C21 15.4 12 21 12 21z'/%3E%3C/svg%3E") 4 2, auto;
+}
+
+@keyframes background-flow {
+	0% {
+		background-position: 0% 0%;
+	}
+
+	100% {
+		background-position: 100% 100%;
+	}
+}
+
+a {
+	color: inherit;
+}
+
+.hero {
+	min-height: auto;
+	padding: 16px 8% 25px;
+	color: var(--blue-color);
+	background-color: var(--dark-color);
+	background-image: linear-gradient(145deg, #8a7778 0%, #766a6c 38%, #65585a 72%, #f3b8ca 100%);
+}
+
+.navigation {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	max-width: 1100px;
+	margin: 0 auto;
+}
+
+.logo {
+	color: var(--blue-color);
+	font-size: 1.7rem;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.nav-links {
+	display: flex;
+	gap: 25px;
+}
+
+.nav-links a {
+	color: var(--blue-color);
+	font-size: 0.9rem;
+	text-decoration: none;
+}
+
+.nav-links a:hover,
+footer a:hover {
+	color: var(--blue-color);
+}
+
+.hero-content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 58px;
+	max-width: 1100px;
+	margin: 35px auto 0;
+}
+
+.hero-text {
+	max-width: 570px;
+	text-align: center;
+}
+
+.eyebrow {
+	margin: 0 0 12px;
+	color: var(--brown-color);
+	font-size: 0.78rem;
+	font-weight: bold;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+}
+
+.hero .eyebrow {
+	color: var(--blue-color);
+}
+
+h1,
+h2 {
+	margin-top: 0;
+	line-height: 1.1;
+}
+
+h1 {
+	margin-bottom: 10px;
+	font-size: clamp(2rem, 5vw, 3.8rem);
+	font-weight: normal;
+}
+
+h1 span {
+	color: var(--blue-color);
+}
+
+.intro {
+	max-width: 440px;
+	margin-bottom: 18px;
+	margin-right: auto;
+	margin-left: auto;
+	color: var(--blue-color);
+	font-size: 1.2rem;
+	text-align: center;
+}
+
+.button {
+	display: inline-block;
+	padding: 12px 20px;
+	color: var(--dark-color);
+	background: var(--blue-color);
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.button:hover {
+	background: var(--brown-color);
+}
+
+.profile-frame {
+	position: relative;
+	order: -1;
+	width: 180px;
+	height: 220px;
+	transform: rotate(0deg);
+}
+
+.flower {
+	position: absolute;
+	z-index: 1;
+	animation: flower-bounce 1.8s ease-in-out infinite;
+	font-size: 1.8rem;
+}
+
+@keyframes flower-bounce {
+	0%,
+	100% {
+		transform: translateY(0);
+	}
+
+	50% {
+		transform: translateY(-8px);
+	}
+}
+
+.flower-top-left {
+	color: var(--blue-color);
+	top: -42px;
+	left: -30px;
+}
+
+.flower-top-center {
+	color: var(--flower-pink);
+	top: -48px;
+	left: 42%;
+}
+
+.flower-top-right {
+	color: var(--blue-color);
+	top: -42px;
+	right: -30px;
+}
+
+.flower-middle-left {
+	color: var(--flower-pink);
+	top: 43%;
+	left: -42px;
+}
+
+.flower-middle-right {
+	color: var(--flower-pink);
+	top: 43%;
+	right: -42px;
+}
+
+.flower-bottom-left {
+	color: var(--blue-color);
+	bottom: -42px;
+	left: -30px;
+}
+
+.flower-bottom-center {
+	color: var(--flower-pink);
+	bottom: -48px;
+	left: 42%;
+}
+
+.flower-bottom-right {
+	color: var(--blue-color);
+	bottom: -42px;
+	right: -30px;
+}
+
+.profile-photo {
+	width: 100%;
+	height: 100%;
+	border: 3px solid var(--blue-color);
+	object-fit: cover;
+	transform: rotate(0deg);
+}
+
+.section {
+	max-width: 1100px;
+	margin: 0 auto;
+	padding: 32px 8%;
+}
+
+.section h2 {
+	max-width: 650px;
+	margin-bottom: 10px;
+	font-size: clamp(1.8rem, 4vw, 3rem);
+	font-weight: normal;
+}
+
+.section-title-icon {
+	margin-left: 8px;
+	color: var(--flower-pink);
+	font-size: 0.75em;
+}
+
+.about-section {
+	text-align: center;
+}
+
+.about-section h2 {
+	margin-right: auto;
+	margin-left: auto;
+}
+
+#skills h2 {
+	margin-right: auto;
+	margin-left: auto;
+	text-align: center;
+}
+
+#skills .eyebrow {
+	text-align: center;
+}
+
+.about-section .eyebrow,
+.about-text {
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.about-text {
+	max-width: 650px;
+	color: var(--muted-color);
+	font-size: 1rem;
+}
+
+.skill-list {
+	display: flex;
+	flex-wrap: wrap;
+	border-top: 1px solid var(--brown-color);
+}
+
+.skill-item {
+	display: flex;
+	flex: 1 1 45%;
+	align-items: center;
+	gap: 24px;
+	min-height: 48px;
+	padding: 7px 20px 7px 0;
+	border-bottom: 1px solid var(--brown-color);
+	font-size: 1rem;
+}
+
+.list-flower {
+	display: inline-block;
+	animation: flower-bounce 1.8s ease-in-out infinite;
+	color: var(--flower-pink);
+	font-size: 1.2rem;
+}
+
+.interests-section {
+	display: flex;
+	gap: 12%;
+	max-width: none;
+	padding-right: 8%;
+	padding-left: 8%;
+	background-image: linear-gradient(115deg, rgba(232, 242, 246, 0.9) 0%, rgba(220, 236, 243, 0.82) 48%, rgba(243, 184, 202, 0.72) 100%);
+}
+
+.interest-column {
+	flex: 1;
+}
+
+.favorite-list {
+	padding: 0;
+	list-style: none;
+}
+
+.favorite-list li {
+	display: flex;
+	gap: 22px;
+	padding: 7px 0;
+	border-bottom: 1px solid var(--brown-color);
+}
+
+.favorite-list strong,
+.favorite-list small {
+	display: block;
+}
+
+.favorite-list small {
+	color: var(--muted-color);
+}
+
+footer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	padding: 18px 8%;
+	color: var(--blue-color);
+	background: var(--dark-color);
+	text-align: center;
+}
+
+.contact-message {
+	margin: 0 0 12px;
+}
+
+footer a {
+	color: var(--blue-color);
+}
+
+.contact-links {
+	display: flex;
+	justify-content: center;
+	gap: 20px;
+}
+
+.contact-links a {
+	display: flex;
+	align-items: center;
+	gap: 6px;
+	font-size: 1.5rem;
+	text-decoration: none;
+}
+
+.contact-icon {
+	color: var(--flower-pink);
+	font-weight: bold;
+}
+
+.github-cat {
+	font-size: 1.3rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	html {
+		scroll-behavior: auto;
+	}
+
+	body,
+	.flower,
+	.list-flower {
+		animation: none;
+	}
+}
+
+/* On a small screen, stack the hero and interest sections. */
+@media (max-width: 700px) {
+	.hero {
+		min-height: auto;
+		padding: 12px 7% 25px;
+	}
+
+	.nav-links {
+		gap: 12px;
+	}
+
+	.nav-links a {
+		font-size: 0.75rem;
+	}
+
+	.hero-content {
+		flex-direction: column;
+		align-items: center;
+		gap: 50px;
+		margin-top: 30px;
+	}
+
+	.profile-frame {
+		width: 140px;
+		height: 175px;
+	}
+
+	.section {
+		padding: 24px 7%;
+	}
+
+	.skill-item {
+		flex-basis: 100%;
+	}
+
+	.interests-section {
+		display: block;
+		padding-right: 7%;
+		padding-left: 7%;
+	}
+
+	.music-column {
+		margin-top: 45px;
+	}
+
+	footer {
+		display: block;
+		padding: 25px 7%;
+	}
+
+	footer a {
+		display: block;
+		margin-top: 8px;
+	}
+
+	.contact-links {
+		display: block;
+	}
+}
